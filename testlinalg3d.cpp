@@ -1,4 +1,4 @@
-#include "tests.h"
+#include "testlinalg3d.h"
 #include <cassert>
 
 double TestLinalg3D::URD(double low, double high){
