@@ -24,6 +24,9 @@ struct Matrix3x3D {
     double* coefficient(int i, int j) { return a +3*j + i; }
     double getCoefficient(int i, int j) const { return a[3*j + i]; }
 
+    // unary minus
+    Matrix3x3D operator-() const;
+
     Matrix3x3D& operator+=(const Matrix3x3D& rhs);
 
 private:

@@ -33,6 +33,14 @@ Matrix3x3D Matrix3x3D::inverted(){
     return inverse;
 }
 
+Matrix3x3D Matrix3x3D::operator-() const {
+    return Matrix3x3D(
+        -getCoefficient(0, 0), -getCoefficient(0, 1), -getCoefficient(0, 2),
+        -getCoefficient(1, 0), -getCoefficient(1, 1), -getCoefficient(1, 2),
+        -getCoefficient(2, 0), -getCoefficient(2, 1), -getCoefficient(2, 2)
+    );
+}
+
 Matrix3x3D &Matrix3x3D::operator+=(const Matrix3x3D &rhs) {
     for(int c=0;c<9;c++) a[c] += rhs.a[c];
     return *this;
